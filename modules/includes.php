@@ -1,7 +1,7 @@
 <?php
 
 // checks if the config file got edited
-if(!is_readable(__DIR__ . '/config.php')) {
+if(!file_exists(__DIR__ . '/config.php')) {
 	require_once(__DIR__ . '/functions.php');
     myError('Please edit the config file first! Go to the <i>modules</i> folder, ' . 
     	    ' execute <i>cp config.sample.php config.php</i> and modify <i>config.php</i> ' .
